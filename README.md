@@ -17,6 +17,9 @@ pip install time-kong
 ## Usages
 
 ### TimeKong
+
+Convert time between timestamp, string and datetime:
+
 ```python
 from datetime import datetime
 
@@ -42,10 +45,12 @@ TimeKong.datetime2string(dt, formatter="%Y-%m-%d %H:%M:%S.%f")
 ```
 
 ### TimeGen
+
+Generate time in second quickly:
+
 ```python
 from time_kong import TimeGen
 
-# generate time in second quickly
 print "42 milliseconds is %s second" % TimeGen.n_milliseconds(42)
 print "42 seconds is %s seconds" % TimeGen.n_seconds(42)
 print "42 minutes is %s seconds" % TimeGen.n_minutes(42)
@@ -63,7 +68,7 @@ print "42 years is %s seconds" % TimeGen.n_years(42)
 # 42 years is 39735360000 seconds
 ```
 
-Constants
+Constants included:
 
 1. `TimeGen.ONE_MILLISECOND`
 2. `TimeGen.ONE_SECOND`
