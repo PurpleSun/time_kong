@@ -1,6 +1,6 @@
 # TimeKong
 
-Time adaptor between timestamp, string and datetime.
+Time converter between timestamp, string and datetime.
 
 ## Usages
 

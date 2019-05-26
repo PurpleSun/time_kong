@@ -14,7 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/PurpleSun/time_kong",
     version="0.0.1",
-    keywords=("time", "transform", "convert", "adaptor"),
+    keywords=("time", "transform", "converter", "adaptor"),
     description="A useful time transform util, transforms between string, timestamp and datetime format",
     license="MIT License",
     install_requires=[],
