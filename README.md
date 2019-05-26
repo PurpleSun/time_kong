@@ -1,6 +1,6 @@
 # TimeKong
 
-![time kong](https://github.com/PurpleSun/time_kong/blob/master/time-kong.png =300x200 "time kong")
+![time kong](https://github.com/PurpleSun/time_kong/blob/master/time-kong.png?raw=true "time kong")
 
 Time converter between timestamp, string and datetime.
 
