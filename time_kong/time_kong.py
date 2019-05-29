@@ -9,6 +9,17 @@ __all__ = ["TimeKong"]
 
 
 class TimeKong(object):
+    NANOSECOND = 1 / 1e9
+    MICROSECOND = 1 / 1e6
+    MILLISECOND = 1 / 1e3
+    SECOND = 1
+    MINUTE = 60
+    HOUR = 60 * 60
+    DAY = 24 * 60 * 60
+    WEEK = 7 * 24 * 60 * 60
+    MONTH = 31 * 24 * 60 * 60
+    YEAR = 365 * 24 * 60 * 60
+
     FORMATTER = "%Y-%m-%d %H:%M:%S"
 
     @staticmethod
@@ -42,6 +53,10 @@ class TimeKong(object):
         return datetime.strptime(s, formatter)
 
     @classmethod
+    def floor_to_microsecond(cls, timestamp):
+        return round(timestamp, 6)
+
+    @classmethod
     def floor_to_millisecond(cls, timestamp):
         return round(timestamp, 3)
 
@@ -51,15 +66,11 @@ class TimeKong(object):
 
     @classmethod
     def floor_to_minute(cls, timestamp):
-        d = cls.timestamp2datetime(timestamp)
-        floor_d = datetime(year=d.year, month=d.month, day=d.day, hour=d.hour, minute=d.minute)
-        return cls.datetime2timestamp(floor_d)
+        return timestamp - timestamp % TimeKong.MINUTE
 
     @classmethod
     def floor_to_hour(cls, timestamp):
-        d = cls.timestamp2datetime(timestamp)
-        floor_d = datetime(year=d.year, month=d.month, day=d.day, hour=d.hour)
-        return cls.datetime2timestamp(floor_d)
+        return timestamp - timestamp % TimeKong.HOUR
 
     @classmethod
     def floor_to_day(cls, timestamp):

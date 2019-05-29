@@ -44,39 +44,18 @@ TimeKong.datetime2string(dt, formatter="%Y-%m-%d %H:%M:%S.%f")
 # '2019-05-26 22:42:26.864879'
 ```
 
-### TimeGen
-
-Generate time in second quickly:
-
-```python
-from time_kong import TimeGen
-
-print "42 milliseconds is %s second" % TimeGen.n_milliseconds(42)
-print "42 seconds is %s seconds" % TimeGen.n_seconds(42)
-print "42 minutes is %s seconds" % TimeGen.n_minutes(42)
-print "42 hours is %s seconds" % TimeGen.n_hours(42)
-print "42 days is %s seconds" % TimeGen.n_days(42)
-print "42 months is %s seconds" % TimeGen.n_months(42)
-print "42 years is %s seconds" % TimeGen.n_years(42)
-
-# 42 milliseconds is 0.042 second
-# 42 seconds is 42 seconds
-# 42 minutes is 2520 seconds
-# 42 hours is 151200 seconds
-# 42 days is 3628800 seconds
-# 42 months is 108864000 seconds
-# 42 years is 39735360000 seconds
-```
-
 Constants included:
 
-1. `TimeGen.ONE_MILLISECOND`
-2. `TimeGen.ONE_SECOND`
-3. `TimeGen.ONE_MINUTE_SECONDS`
-4. `TimeGen.ONE_HOUR_SECONDS`
-5. `TimeGen.ONE_DAY_SECONDS`
-6. `TimeGen.ONE_MONTH_SECONDS`
-7. `TimeGen.ONE_YEAR_SECONDS`
+1. `TimeKong.NANOSECOND`
+1. `TimeKong.MICROSECOND`
+2. `TimeKong.MILLISECOND`
+3. `TimeKong.SECOND`
+4. `TimeKong.MINUTE`
+5. `TimeKong.HOUR`
+6. `TimeKong.DAY`
+7. `TimeKong.WEEK`
+8. `TimeKong.MONTH`
+9. `TimeKong.YEAR`
 
 
 ## Author
